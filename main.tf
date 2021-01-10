@@ -41,7 +41,7 @@ resource "aws_autoscaling_group" "example1" {
   launch_configuration = aws_launch_configuration.example1.id
   availability_zones   = data.aws_availability_zones.all.names
 
-  min_size = 2
+  min_size = 3
   max_size = 10
 
   load_balancers    = [aws_elb.example1.name]
